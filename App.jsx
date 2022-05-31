@@ -13,14 +13,13 @@ const App = () => {
   }
 
   useEffect(() => {
-    if (num % 3 === 0) {
+    if (num % 3 === 0 && num > 0) {
       switchFlag || setSwitchFlag(true);
     } else {
       switchFlag && setSwitchFlag(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [num]);
-  console.log(switchFlag);
   return (
     <React.Fragment>
       <h1 style={{ color: "red" }}>こんにちは</h1>
